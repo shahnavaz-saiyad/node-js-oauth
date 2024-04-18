@@ -2,8 +2,12 @@ import express from 'express';
 
 import { userRouter } from './routes/UserRouter';
 import { authRouter } from './routes/AuthRoutes';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
+
 
 app.use(express.json());
 

@@ -2,7 +2,6 @@
 
 import { Request, Response, NextFunction } from 'express';
 import { verifyToken } from '../helpers/token';
-import { ACCESS_TOKEN_SECRET } from '../utils/Constants';
 
 // Extend the Request type to include a 'userId' property
 interface AuthenticatedRequest extends Request {
@@ -15,7 +14,7 @@ export const authenticateToken = async (req: AuthenticatedRequest, res: Response
   if (!token) return res.sendStatus(401);
 
   try {
-    const decoded: any = await verifyToken(token, ACCESS_TOKEN_SECRET!);
+    const decoded: any = await verifyToken(token, process.env.ACCESS_TOKEN_SECRET!);
     req.userId = decoded.userId;
     next();
   } catch (error) {

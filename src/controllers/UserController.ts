@@ -2,7 +2,6 @@ import { Request, Response } from 'express';
 import { User } from '../models/User';
 import bcrypt from 'bcryptjs';
 import { generateAccessToken, generateRefreshToken, verifyToken } from '../helpers/token';
-import { REFRESH_TOKEN_SECRET } from '../utils/Constants';
 import { Token } from '../models/Token';
 
 export const getUsers = async (req: Request, res: Response) => {
