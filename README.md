@@ -63,12 +63,8 @@ This is a sample Node.js application built with TypeScript that demonstrates how
 
 ## API Endpoints
 
-- `POST /register`: Register a new user.
-- `POST /login`: Login with email and password to obtain access and refresh tokens.
-- `POST /refresh-token`: Refresh access token using refresh token.
-- `POST /revoke-token`: Revoke a specific refresh token.
+- `POST /oauth/register`: Register a new user.
+- `POST /oauth/token`: Login with email and password to obtain access and refresh tokens.
+- `POST /oauth/token/refresh`: Refresh access token using refresh token.
+- `POST /oauth/token/revoke`: Revoke a specific refresh token.
 
-## Documentation
-
-- The application code is well-commented to explain the functionality of each part.
-- For more detailed documentation, refer to the source code and comments in the `controllers`, `models`, `routes`, and `helpers` directories.
