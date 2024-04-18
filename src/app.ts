@@ -1,13 +1,15 @@
 import express from 'express';
 
-import { router as userRouter } from './routes/UserRouter';
+import { userRouter } from './routes/UserRouter';
+import { authRouter } from './routes/AuthRoutes';
 
 const app = express();
 
 app.use(express.json());
 
 app.use('/users', userRouter);
+app.use('/oauth', authRouter);
 
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
+app.listen(3001, () => {
+  console.log('Server is running on port 3001');
 });

@@ -1,7 +1,8 @@
 import { Router } from 'express';
+import { authenticateToken } from '../middleware/authenticate';
 
-import { getUsers } from '../controllers/UserController';
+import { getUsers, loginUser } from '../controllers/UserController';
 
-export const router = Router();
+export const userRouter = Router();
 
-router.get('/', getUsers);
+userRouter.get('/', authenticateToken, getUsers);

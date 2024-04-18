@@ -7,11 +7,10 @@ export class User extends Model {
   public lastName!: string;
   public email!: string;
   public password!: string; 
-  public accessToken!: string; 
-  public refreshToken!: string;
   public createdAt!: Date;
   public updatedAt!: Date;
 }
+
 
 User.init(
   {
@@ -38,26 +37,17 @@ User.init(
     createdAt: {
       type: DataTypes.DATE,
       defaultValue: DataTypes.NOW,
+      field: "created_at"
     },
     updatedAt: {
       type: DataTypes.DATE,
       defaultValue: DataTypes.NOW,
+      field: "updated_at"
     },
     password: {
         type: DataTypes.STRING,
         allowNull: false,
-    },
-    accessToken: {
-        type: DataTypes.STRING,
-        allowNull: true,
-        field: 'access_token',
-    },
-    refreshToken: {
-        type: DataTypes.STRING,
-        allowNull: true,
-        field: 'refresh_token'
-    }
-  },
+    }},
   {
     sequelize,
     modelName: 'user',
