@@ -59,7 +59,7 @@ This is a sample Node.js application built with TypeScript that demonstrates how
    npm start
    ```
 
-   The server will start running on port 3000 by default. You can access the API endpoints at `http://localhost:3000`.
+   The server will start running on port 3001 by default. You can access the API endpoints at `http://localhost:3001`.
 
 ## API Endpoints
 
