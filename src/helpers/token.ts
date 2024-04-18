@@ -13,15 +13,6 @@ export const generateRefreshToken = (user: User): string => {
   return jwt.sign({ userId: user.id }, process.env.REFRESH_TOKEN_SECRET!);
 };
 
-// export const verifyToken = (token: string, secret: string): Promise<any> => {
-//   return new Promise((resolve, reject) => {
-//     jwt.verify(token, secret, (err, decoded) => {
-//       if (err) return reject(err);
-//       resolve(decoded);
-//     });
-//   });
-// };
-
 export const verifyToken = (token: string, secret: string): Promise<any> => {
   return new Promise(async (resolve, reject) => {
     try {
