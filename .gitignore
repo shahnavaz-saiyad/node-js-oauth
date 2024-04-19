@@ -10,11 +10,7 @@ dist/
 # Ignore TypeScript source map files
 *.js.map
 
-# Ignore environment-specific configuration files
-.env
 
-# Ignore any local development configurations
-.env.local
 
 # Ignore any logs or other output files
 logs/
